@@ -1,0 +1,24 @@
+@import "sass/var";
+@import "sass/mix";
+@import "sass/mix.media";
+
+body {
+  background: #eeeeee;
+  font-family: $font-famaly;
+}
+
+.main {
+  min-height: 100vh;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -262px; /* the bottom margin is the negative value of the footer's height */
+}
+.side-nav li .nav-link.target {
+  color: $primary-color;
+  font-weight: $font-bold;
+  @extend %display-block;
+}
+.push {
+  height: 250px; /* .push must be the same height as .footer */
+}
+

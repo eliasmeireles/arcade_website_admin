@@ -1,0 +1,173 @@
+@import "../sass/var";
+%background-size_max {
+  background-size: 100% 100%;
+}
+
+%background-repeat_none {
+  background-repeat: no-repeat;
+}
+%background-repeat_repeat {
+  background-repeat: repeat;
+}
+
+%background-primary {
+  background: $primary-color;
+}
+
+%font-weigth-500 {
+  font-weight: 500;
+}
+
+%font-weigth-600 {
+  font-weight: 600;
+}
+
+%font-weigth_bold {
+  font-weight: bold;
+}
+
+%text-none-decoration {
+  text-decoration: none;
+}
+
+%max-width-100-por-cento {
+  max-width: 100%;
+}
+
+%width_100porCento {
+  width: 100%;
+}
+%imagens_100porCento {
+  height: 100%;
+  width: 100%;
+}
+
+%position-relative {
+  position: relative;
+}
+
+%position-absolute {
+  position: absolute;
+}
+
+%position-fixed {
+  position: fixed;
+}
+
+%text-upercase {
+  text-transform: uppercase;
+}
+
+%text-center {
+  text-align: center;
+}
+
+%font-size-pattern {
+  font-size: $font-size-pattern;
+}
+
+%margin-zero_auto {
+  margin: 0 auto;
+}
+
+%margin-rest {
+  margin: inherit;
+}
+
+%padding-reset {
+  padding: inherit;
+}
+
+%overflow-hidden {
+  overflow: hidden;
+}
+
+%overflow-scroll {
+  overflow: scroll;
+}
+
+%overflow-auto {
+  overflow: auto;
+}
+
+%display-inherit {
+  display: inherit;
+}
+
+%display-none {
+  display: none;
+}
+
+%display-block {
+  display: block;
+}
+
+%display-flex {
+  display: flex;
+}
+
+%justify-content-space-between {
+  justify-content: space-between;
+}
+%justify-content-space-around {
+  justify-content: space-around;
+}
+
+%justify-content-center {
+  justify-content: center;
+}
+%flex-wrap {
+  flex-wrap: wrap;
+}
+
+%flex-direction-collumn {
+  flex-direction: column;
+}
+
+%align-items-center {
+  align-items: center;
+}
+
+%flex-um {
+  flex: 1;
+}
+
+%display-inline-block {
+  display: inline-block;
+}
+%vertical-align-middle {
+  vertical-align: middle;
+}
+
+%heigth_100Cento {
+  height: 100%;
+}
+
+%white-color {
+  color: #ffffff;
+}
+
+%line-higth-pattern {
+  line-height: 1.6;
+}
+
+@mixin height($height-size-valeu) {
+  height: $height-size-valeu;
+}
+
+@mixin min-height($min-height-size-valeu) {
+  min-height: $min-height-size-valeu;
+}
+@mixin max-height($max-height-size-valeu) {
+  max-height: $max-height-size-valeu;
+}
+
+@mixin max-width($max-width-value) {
+  max-width: $max-width-value;
+}
+@mixin width($width-value) {
+  width: $width-value;
+}
+@mixin margin($width-value) {
+  width: $width-value;
+}

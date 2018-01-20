@@ -1,0 +1,41 @@
+@import '~materialize-css/sass/components/color';
+
+$primary-color: #fa6a10;
+
+$container-max_width: 1360px;
+$black-collor1F1F1F: #1F1F1F;
+$black-collor: #000;
+$light-color: #fff;
+
+//Text font
+$font-famaly: 'CenturyGothic-Bold', "Trebuchet MS", Arial, Helvetica, sans-serif;
+
+//Break-points
+$resolution-468: 468px;
+$resolution-580: 580px;
+$resolution-680: 680px;
+$resolution-767: 767px;
+$resolution-880: 880px;
+$resolution-968: 968px;
+$resolution-1024: 1024px;
+$resolution-1280: 1280px;
+$resolution-1366: 1366px;
+$resolution-1400: 1400px;
+$resolution-1680: 1680px;
+$resolution-1920: 1920px;
+
+
+//font-size
+$font-size-h1-resolution-320: 1.5em;
+$font-size-h2-resolution-320: 1.3em;
+$font-size-h3-resolution-320: 1.1em;
+$font-size-h4-resolution-320: 1em;
+$font-size-pattern: 0.93rem;
+$font-size-12rem: 1.12em;
+
+//font-weght
+$font-bold: bold;
+
+//Line-heigth
+
+$line-heigth-primary: 1.3;

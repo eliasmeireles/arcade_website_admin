@@ -1,0 +1,20 @@
+@import "../sass/var";
+
+%display-block-media767 {
+  @media (min-width: $resolution-767) {
+    display: block;
+  }
+}
+
+%width_reset_media767 {
+  @media (min-width: $resolution-767) {
+    width: auto !important;
+  }
+}
+
+@mixin media-position($width-size, $position-value) {
+  @media (min-width: $width-size) {
+    position: $position-value;
+  }
+}
+

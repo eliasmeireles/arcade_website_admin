@@ -1,0 +1,140 @@
+<div class="container">
+
+  <h5 class="center arcade-tittle">Ranking dos Players</h5>
+  <form class="col s12" (ngSubmit)="atualizar($event)">
+    <div class="row">
+      <div class="input-field col s12">
+
+        <input (keyup)="0" #playerNomeFiltro type="text">
+
+        <label for="pontos">Filtrar player</label>
+      </div>
+    </div>
+  </form>
+  <div class="table-container">
+
+    <div class="fixed-action-btn">
+      <a href="#modal1newplayer" class="modal-trigger btn-floating btn-large waves-effect waves-light red"
+         (click)="reset()"><i
+        class="material-icons">add</i></a>
+    </div>
+    <table class="responsive-table centered striped bordered">
+
+      <thead>
+      <tr>
+        <th>Ranking</th>
+        <th>Nome</th>
+        <th>Email</th>
+        <th>Pontos</th>
+      </tr>
+      </thead>
+
+      <tbody>
+      <tr *ngFor="let player of players | filtroPlayerPorNome: playerNomeFiltro.value" class="modal-trigger" href="#modal1update" (click)="alterPlayerValues(player)"
+          style="cursor: pointer">
+
+        <td>{{players.indexOf(player) + 1}}</td>
+        <td>{{player.nome}}</td>
+        <td>{{player.email}}</td>
+        <td>{{player.pontos}}</td>
+
+      </tr>
+      </tbody>
+    </table>
+
+    <div id="modal1update" class="modal">
+      <div class="modal-content">
+        <h5>Atualizar os pontos para!</h5>
+        <h5>{{player.nome}}</h5>
+
+        <form class="col s12" (ngSubmit)="atualizar($event)">
+          <div class="row">
+            <div class="input-field col s12">
+
+              <input max="{{maxAddPontos}}"
+                     min="0"
+                     name="pontos"
+                     [(ngModel)]="player.pontos"
+                     id="pontos" type="number" class="validate">
+
+              <label for="pontos">Informe os pontos!</label>
+            </div>
+          </div>
+
+          <div *ngIf="pontosValidation" class="card-panel red lighten-2">{{pontosValidation}}</div>
+          <div *ngIf="serviceResult" class="card-panel green lighten-2">{{serviceResult}}</div>
+
+          <div class="modal-footer">
+            <a href="#modal1delete" class="modal-action modal-close waves-effect waves-green btn-flat modal-trigger">Deletar
+              esse player</a>
+
+            <a class="modal-action waves-effect waves-green btn-flat" (click)="atualizar($event)">Atualizar</a>
+
+          </div>
+        </form>
+      </div>
+    </div>
+
+
+    <div id="modal1delete" class="modal">
+      <div class="modal-content">
+        <h5>Confirmar a exclusão do contato?</h5>
+        <h5>{{player.nome}}</h5>
+
+
+        <div class="modal-footer">
+          <a class="modal-action modal-close waves-effect waves-green btn-flat"
+             (click)="deletarPlayer($event)">Confirmar</a>
+        </div>
+      </div>
+    </div>
+
+    <div id="modal1newplayer" class="modal">
+      <div class="modal-content">
+        <h5>Adcionando um novo player</h5>
+
+        <form class="col s12" (ngSubmit)="newPlayer($event)">
+          <div class="row">
+            <div class="input-field col s12">
+
+              <input name="nome"
+                     [(ngModel)]="player.nome"
+                     id="nome" type="text" class="validate">
+
+              <label for="nome">Nome</label>
+            </div>
+
+            <div class="input-field col s12">
+
+              <input name="email"
+                     [(ngModel)]="player.email"
+                     id="email" type="email" class="validate">
+
+              <label for="nome">Email</label>
+            </div>
+
+            <div class="input-field col s12">
+
+              <input max="{{maxAddPontos}}"
+                     min="0"
+                     name="pontos"
+                     [(ngModel)]="player.pontos"
+                     id="pontos" type="number" class="validate">
+
+              <label for="pontos">Informe os pontos!</label>
+            </div>
+          </div>
+
+          <div *ngIf="serviceResult" class="card-panel green lighten-2">{{serviceResult}}</div>
+
+          <div class="modal-footer">
+
+            <a class="modal-action waves-effect waves-green btn-flat "
+               (click)="newPlayer($event)">Cadastrar</a>
+          </div>
+        </form>
+      </div>
+    </div>
+
+  </div>
+</div>
